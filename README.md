@@ -44,9 +44,17 @@ Looking at the dataset, most students fell into the Medium category (113 student
 
 Raw survey responses cannot be fed directly into a Machine Learning model — they need to be cleaned and transformed first.
 
-**Data Cleaning** involved two steps. First, any missing responses were filled in using the median value for numerical questions and the most common answer (mode) for multiple-choice questions, ensuring no gaps in the data. Second, duplicate submissions were removed, and statistical outliers in the satisfaction scores were identified and excluded using the IQR (Interquartile Range) method — a standard technique for detecting values that are unusually far from the rest of the data.
+**Data Cleaning** involved two steps. 
 
-**Data Transformation** also involved two steps. First, all text-based answers were converted into numbers through encoding — ordinal answers like "Never / Rarely / Sometimes / Often / Always" were mapped to 1–5, while the content type question was expanded into separate binary columns using One-Hot Encoding. Second, all numerical features were scaled to a uniform range of 0.0 to 1.0 using Min-Max Normalization, so that no single feature unfairly dominates the model's learning process.
+First, any missing responses were filled in using the median value for numerical questions and the most common answer (mode) for multiple-choice questions, ensuring no gaps in the data. 
+
+Second, duplicate submissions were removed, and statistical outliers in the satisfaction scores were identified and excluded using the IQR (Interquartile Range) method — a standard technique for detecting values that are unusually far from the rest of the data.
+
+**Data Transformation** also involved two steps. 
+
+First, all text-based answers were converted into numbers through encoding — ordinal answers like "Never / Rarely / Sometimes / Often / Always" were mapped to 1–5, while the content type question was expanded into separate binary columns using One-Hot Encoding. 
+
+Second, all numerical features were scaled to a uniform range of 0.0 to 1.0 using Min-Max Normalization, so that no single feature unfairly dominates the model's learning process.
 
 ---
 
